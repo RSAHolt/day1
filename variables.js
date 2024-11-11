@@ -69,3 +69,12 @@ let num1 = 5
 // num1 -- post decrement
 console.log(num1++);
 console.log(num1);
+
+//String Methods
+let myString = "Something "
+//Shows us the length of the string
+let length=myString.length
+//Make text capital --> myString.toUpperCase()
+//Make text small letter --> myString.toLowerCase()
+let split = myString.split('')
+console.log(split);
