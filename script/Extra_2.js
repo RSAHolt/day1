@@ -94,10 +94,9 @@ for (const i of friends){
 
 // // TODO: Create a new loop to add a new hobby called ‘Being a legend’ to each friend
 // without changing them individually.
-for (const i of friends){
-   if (i.key=='hobbies'){;
-    
-    friends[i].hobbies.push('Being a legend')
+for (const i of friends){ 
+    i.hobbies.push("Being a legend")
 }
-}
-console.log(friends[1].hobbies);
+
+console.log(friends);
+

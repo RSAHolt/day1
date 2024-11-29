@@ -359,3 +359,152 @@
 //     console.log('Yay! I have run and I\'m out of breath');
     
 // }
+
+// function waiting(callback){
+//     console.log('You are waiting for your meal 1');
+//     setTimeout(()=>{
+//         console.log('Your food is ready');
+//         callback()
+        
+//     },4000)
+// }
+// function ready(){
+//     console.log('Your food has been served');
+    
+// }
+// waiting(ready)
+// console.log('You are waiting for your meal 2');
+// console.log('You are waiting for your meal 3');
+// let workout = true
+// let p = new Promise((resolve,reject)=>{
+//     if (workout) {
+//         resolve('Mans\'s looking like johonny bravo')    
+//     } else {
+//         reject('hebana eish man')
+//     }
+// })
+// let array
+// p
+// .then((mes)=>mes.split(''))
+// .then(arr=>array=arr)
+// .catch(e=>{
+
+// })
+
+// async function waiting(){
+//     let p =await new Promise((resolve, reject) => {
+        
+//     })
+// }
+
+// fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')
+// .then(api=>api.json())
+// .then(data => {
+//     console.log(data);
+    
+// })
+// .catch(err=>console.error(err))
+
+// async  function fetchData(){
+//     let api=await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')
+//     if(api.status != 200) throw new Error('Problems eish')
+//     console.log(api)
+    
+// }
+// fetchData()
+
+// const fetchData = async() => {
+//     let api=await(await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')).json();
+//     console.log(api);
+// }
+// fetchData()
+
+// async function fetchAPI(){
+//     let api = await fetch('https://rsaholt.github.io/api/');
+//     let data = await api.json()
+//     friends=data
+//     console.log(JSON.stringify(data, null, 2));
+//     friends.forEach(item =>{
+//         console.log(`${item.firstName} ${item.lastName}  likes ${item.favHobby} and is ${item.criminal?`a criminal who stole a ${item.dreamCars[0]}`:'not a criminal'}` );
+//                     item.dreamCars.forEach(car =>{
+//                         console.log(car);   
+//                     })
+//     })
+//     let filtered = friends.filter(friend => friend.criminal==true)
+//     console.log(filtered);
+    
+    
+
+
+// }
+// fetchAPI()
+//['juan','two']
+
+// let button = document.querySelector('button')
+// let p = document.querySelectorAll('h1')[2]
+
+// button.addEventListener('click',()=>{
+//     if (p.innerText=='Bru'){
+//         return p.innerText = 'Javascript is k@k'
+//     }else if(p.innerText == 'Javascript is k@k'){
+//         p.innerText = 'Javascript is still k@k!!!'
+//     }else if(p.innerText == 'Javascript is still k@k!!!'){
+//         p.innerText = 'Javascript hasn\'t stopped being k@k!!!'
+//     }else {
+//         p.innerText = 'Bru'
+//     }
+// })
+
+// let pluralh1 = document.querySelectorAll('h1')
+
+// pluralh1.forEach(element => {
+//     element.addEventListener('click',()=>{
+//         alert(element.innerText)
+//     })
+// })
+
+// let cal=document.getElementById('iCalc')
+// let span = document.querySelector('span')
+
+// cal.addEventListener('click',()=>{
+//     let juan = document.getElementById('one').value
+//     let u = document.getElementById('two').value
+//     let answer = +juan + +u
+//     span.innerText = answer
+//     return alert(answer)
+    
+// })
+
+let form = document.querySelector('form')
+
+form.addEventListener('submit',(e)=>{
+    // e.preventDefault()
+    console.log(form.elements.email);
+    const {email,password,username} = form.elements
+    if (!email.value){
+        alert('Please enter an email')
+        return
+    }else if (!password.value){
+        alert('Please enter a password')
+        return
+    }else if (!username.value){
+        alert('Please enter a username')
+        return
+    }else{
+        alert('The form has been submitted')
+    }
+
+    
+})
+
+let h4=document.querySelector('h4')
+let p = document.querySelector('[luke]')
+
+h4.addEventListener('click',()=>{
+    // if(p.style.display == 'none'){
+    //     p.style.display = 'block'
+    // }else{
+    //     p.style.display = 'none'
+    // }
+    p.classList.toggle('hidden')
+})
